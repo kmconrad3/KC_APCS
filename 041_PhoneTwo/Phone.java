@@ -1,4 +1,3 @@
-
 public class Phone{ 
     // create Phone class
 
@@ -9,6 +8,15 @@ public class Phone{
     int year;
     // create variables that can be used all throughout the class
 
+    public Phone(){
+        brand = "apple";
+        batteryHours = 0;
+        color = "black";
+        provider = "verison";
+        year = 2000;
+        // default constructor if no parameters are entered
+    }
+
     public Phone(String brand, String color, String provider, int year){
         this.brand = brand;
         this.color = color;
@@ -17,6 +25,15 @@ public class Phone{
         batteryHours = batteryFind(year);
         /* making phone constructor and setting the instance variables 
         to the previously defined variables so they can be used further */
+    }
+
+    public Phone(String color){
+        this.color = color;
+        brand = "apple";
+        batteryHours = 0;
+        provider = "verison";
+        year = 2000;
+        // another phone constructor to adjust and take in the phone color parameter
     }
 
     public int batteryFind(int year) {
@@ -34,10 +51,9 @@ public class Phone{
             // created a method needing int parameter, it uses the set year from the phone class, involves if statement
         }
 
-    public void messages(){
-        int messages = (int) (Math.random()*10);
-        System.out.println("You have " + messages + ".");
-        // another method needing no parameters, it randomly gives out an int of how many messages the created phone has
+    public String toString(){
+        return "The phone has; " + provider + " " + brand + " " + year + " " + color;
+        // overloading the special toString method, redefining it
     }
 
     public static void main(String[]args){}

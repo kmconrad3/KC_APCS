@@ -22,7 +22,7 @@ public class Phone{
     public int batteryFind(int year) {
     
         if (year<=2000){
-            return 5; }
+            return 5;}
         else if (year>2000 && year<=2010){
             return 7;}
         else if (year>2010 && year<=2015){
