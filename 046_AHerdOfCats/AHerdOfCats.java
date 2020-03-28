@@ -14,7 +14,7 @@ public class AHerdOfCats{
                 System.out.println(x[i].getWeight() + " is the current weight");
                 // use getter method from Cat
                 System.out.println("I am feeding the cat a pound of fish");
-                x[i].y =+ 1; 
+                x[i].y = x[i].getWeight() + 1; 
                 // altering the weight in the array
                 System.out.println(x[i].getWeight() + " is now the cats weight");
                 System.out.println();
